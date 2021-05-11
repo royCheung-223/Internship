@@ -18,4 +18,20 @@ rosserial_python serial_node.py send the cmd_vel to audrino
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
 *To set the same baud rate in serial and the arduino*
 
+##Ubuntu terminal
+tmux
+ctrl+b shift+" a horizontal line
+ctrl+b shift+% a vertical line
+ctrl+b ->      change window on terminal
 
+##Quick start of program(same as type in terminal)
+echo "Start"
+source devel/setup.bash
+rosrun demo_python demo.py
+python src/demo_2.py
+echo "Done"
+
+##change executable of program
+intial white colour
+##sudo chmod a+x "file name.sh" 
+after would become green 
