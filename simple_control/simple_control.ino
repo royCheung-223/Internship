@@ -35,7 +35,9 @@ void setup(){
     nh.subscribe(sub);
 }
 void loop(){
+    Serial.write("speed_lin");
     Serial.println(speed_lin);
+    Serial.write("speed_ang");
     Serial.println(speed_ang);
     MotorL(w_l*40);
     MotorR(w_r*40);
