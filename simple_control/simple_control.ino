@@ -20,8 +20,8 @@ double speed_ang=0, speed_lin=0;
 void messageCb( const geometry_msgs::Twist& msg){
       speed_ang = -msg.angular.z;
       speed_lin = -msg.linear.x;
-      w_r = (speed_lin/wheel_rad) + ((speed_ang*wheel_sep)/(2.0*wheel_rad));
-      w_l = (speed_lin/wheel_rad) - ((speed_ang*wheel_sep)/(2.0*wheel_rad));
+      w_r = (speed_lin/wheel_rad) - ((speed_ang*wheel_sep)/(2.0*wheel_rad)*2);
+      w_l = (speed_lin/wheel_rad) + ((speed_ang*wheel_sep)/(2.0*wheel_rad)*2);
 
       
 }
@@ -37,8 +37,8 @@ void setup(){
 void loop(){
     Serial.println(speed_lin);
     Serial.println(speed_ang);
-    MotorL(w_l*10);
-    MotorR(w_r*10);
+    MotorL(w_l*40);
+    MotorR(w_r*40);
     nh.spinOnce();
     delay(100);
  
