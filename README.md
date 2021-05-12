@@ -4,6 +4,7 @@
 *source devel/setup.bash*
 
 ##run the roscore before using the rosserial
+![Screenshot from 2021-05-12 11-50-46](https://user-images.githubusercontent.com/83933967/117915798-92e4fe80-b318-11eb-8571-bfa4f1892d72.png)
 
 ## Cannot use serial print
 *The port would be interrupted*
