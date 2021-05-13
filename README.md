@@ -36,3 +36,13 @@ echo "Done"
 intial white colour
 ## sudo chmod a+x "file name.sh" 
 after would become green 
+
+## reading the encoder value
+Step1:
+Set the encoder pin as input
+Step2:
+attachInterrupt(digitalPinToInterrupt(3), countL, RISING); //count the rising pulse
+*digitalPinToInterrupt("the encoder pin")*
+*countL the function of counting pulses*
+*RISING:counting the rising pulse*
+

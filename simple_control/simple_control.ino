@@ -10,6 +10,11 @@
 #define EN_R 13
 #define IN1_R 8
 #define IN2_R 10
+#define encoder_L 3
+#define encoder_R 2
+
+volatile unsigned int pulses_L = 0;
+volatile unsigned int pulses_R = 0;
 double w_r=0, w_l=0;
 //wheel_rad is the wheel radius ,wheel_sep is
 double wheel_rad = 0.0325, wheel_sep = 0.295;
@@ -29,20 +34,39 @@ ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );
 void Motors_init();
 void MotorL(int Pulse_Width1);
 void MotorR(int Pulse_Width2);
+void countL() {
+  // This function is called by the interrupt
+  pulses_L++;
+}
+
+void countR() {
+  // This function is called by the interrupt
+  pulses_R++;
+}
+
 void setup(){
     Motors_init();
     nh.initNode();
     nh.subscribe(sub);
+    pinMode(encoder_L, INPUT);
+    pinMode(encoder_R, INPUT);
+    attachInterrupt(digitalPinToInterrupt(3), countL, RISING); //count the rising pulse
+    attachInterrupt(digitalPinToInterrupt(2), countR, RISING); //count the rising pulse
+    
 }
 void loop(){
-    Serial.write("speed_lin");
+ /*   Serial.write("speed_lin");
     Serial.println(speed_lin);
     Serial.write("speed_ang");
-    Serial.println(speed_ang);
+    Serial.println(speed_ang);*/
     MotorL(w_l*40);
     MotorR(w_r*40);
     nh.spinOnce();
-    delay(100);
+    Serial.print("Motor L:");
+    Serial.println(pulses_L);
+    Serial.print("Motor R:");
+    Serial.println(pulses_R);
+    delay(1000);
  
 }
 void Motors_init(){
