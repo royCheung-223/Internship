@@ -4,6 +4,7 @@
 #include <ArduinoHardware.h>
 #include <ros.h>
 #include <geometry_msgs/Twist.h>
+#include <std_msgs/Int64.h>
 #define EN_L 12
 #define IN1_L 7
 #define IN2_L 9
@@ -30,6 +31,8 @@ void messageCb( const geometry_msgs::Twist& msg){
 
       
 }
+std_msgs::Int64 str_msg;
+ros::Publisher chatter("chatter", &str_msg);
 ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );
 void Motors_init();
 void MotorL(int Pulse_Width1);
@@ -47,6 +50,7 @@ void countR() {
 void setup(){
     Motors_init();
     nh.initNode();
+    nh.advertise(chatter);
     nh.subscribe(sub);
     pinMode(encoder_L, INPUT);
     pinMode(encoder_R, INPUT);
@@ -66,7 +70,9 @@ void loop(){
     Serial.println(pulses_L);
     Serial.print("Motor R:");
     Serial.println(pulses_R);
-    delay(100);
+    str_msg.data = pulses_L;
+    chatter.publish( &str_msg );
+    delay(1000);
  
 }
 void Motors_init(){
