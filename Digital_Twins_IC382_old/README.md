@@ -72,6 +72,10 @@ The network trained based on ssdmobilienet_v1 with coco dataset.
 
 11. vision_control.sh: it is a script to perform PID control based on vision and deep learning.
 
+12. quick_start.sh: it is a script to have a faster speed to open the simple_control.py
+
+13. control_WithEncode.sh: it is a script to allow manual control of the robot with publishing the encoder value.
+
 ### 5.2 Startup Procedures
 1. ./run_gazebo.sh (load the world) [ROS]
 2. ./camera_publish.sh (publish the image) [ROS]
