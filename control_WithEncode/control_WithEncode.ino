@@ -32,7 +32,9 @@ void messageCb( const geometry_msgs::Twist& msg){
       
 }
 std_msgs::Int64 str_msg;
+std_msgs::Int64 str_msgR;
 ros::Publisher chatter("chatter", &str_msg);
+ros::Publisher chatterR("chatterR", &str_msgR);
 ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );
 void Motors_init();
 void MotorL(int Pulse_Width1);
@@ -51,6 +53,7 @@ void setup(){
     Motors_init();
     nh.initNode();
     nh.advertise(chatter);
+    nh.advertise(chatterR);
     nh.subscribe(sub);
     pinMode(encoder_L, INPUT);
     pinMode(encoder_R, INPUT);
@@ -71,8 +74,10 @@ void loop(){
     Serial.print("Motor R:");
     Serial.println(pulses_R);
     str_msg.data = pulses_L;
+    str_msgR.data = pulses_R;
     chatter.publish( &str_msg );
-    delay(1000);
+    chatterR.publish(&str_msgR);
+    delay(100);
  
 }
 void Motors_init(){

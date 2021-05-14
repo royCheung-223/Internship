@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "robot_vision"
-PROJECT_SPACE_DIR = "/home/iastaff/Digital_Twins_IC382/install"
+PROJECT_SPACE_DIR = "/home/iastaff/Internship/Digital_Twins_IC382_old/install"
 PROJECT_VERSION = "0.0.0"

@@ -71,6 +71,7 @@ def main():
     #This script supported keyboard control
     listener = keyboard.Listener(on_press=on_press,on_release=on_release)
     rospy.Subscriber("chatter", Int64, callback)    #subscribe the rostopic "chatter"
+    rospy.Subscriber("chatterR", Int64, callback)
     listener.start()
     while not rospy.is_shutdown():
         speed_msg.linear.x = power

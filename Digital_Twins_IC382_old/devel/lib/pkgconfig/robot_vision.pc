@@ -1,4 +1,4 @@
-prefix=/home/iastaff/Digital_Twins_IC382/devel
+prefix=/home/iastaff/Internship/Digital_Twins_IC382_old/devel
 
 Name: robot_vision
 Description: Description of robot_vision
