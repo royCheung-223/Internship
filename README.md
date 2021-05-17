@@ -1,20 +1,29 @@
 # Internship
 
 ## Installing ROS in Ubuntu
-Version: Melodic <br />
-sudo apt update <br />
+Version: Melodic 
+<br />
+sudo apt update 
+<br />
 sudo apt install ros-melodic-desktop-full
 
 ##Creating a workspace
 source /opt/ros/melodic/setup.bash
+<br />
 *creating a folder of workspace*
+<br />
 mkdir -p ~/catkin_ws/src
+<br />
 *change directory to your workspace*
+<br />
 cd ~/catkin_ws/
+<br />
 *creating CmakeList.txt to the src folder*
+<br />
 catkin_make
 ## Set up the workspace
 cd "your workspace path"
+<br />
 source devel/setup.bash
 
 ##run the roscore before using the rosserial
@@ -22,28 +31,42 @@ source devel/setup.bash
 
 ## publishing the cmd_vel
 Step1:
+<br />
 reduce publishing rate from python to arduino
+<br />
 Step2:
+<br />
 simple_controller.sh published the velocity 
+<br />
 ![Screenshot from 2021-05-12 11-58-25](https://user-images.githubusercontent.com/83933967/117916321-87de9e00-b319-11eb-91e2-ac5cb8ac3498.png)
 Step3:
+<br />
 rosserial_python serial_node.py send the cmd_vel to audrino
+<br />
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
+<br />
 *To set the same baud rate in serial and the arduino*
 ![Screenshot from 2021-05-12 12-01-38](https://user-images.githubusercontent.com/83933967/117916506-dee47300-b319-11eb-9953-760d2e1f2c4a.png)
 
 
 ## Ubuntu terminal
 tmux
+<br />
 ctrl+b shift+" a horizontal line
+<br />
 ctrl+b shift+% a vertical line
+<br />
 ctrl+b ->      change window on terminal
 
 ## Quick start of program(same as type in terminal)
 echo "Start"
+<br />
 source devel/setup.bash
+<br />
 rosrun demo_python demo.py
+<br />
 python src/demo_2.py
+<br />
 echo "Done"
 
 ## change executable of program
@@ -53,11 +76,17 @@ after would become green
 
 ## reading the encoder value
 Step1:
+<br />
 Set the encoder pin as input
+<br />
 Step2:
+<br />
 attachInterrupt(digitalPinToInterrupt(3), countL, RISING); //count the rising pulse
+<br />
 *digitalPinToInterrupt("the encoder pin")*
+<br />
 *countL the function of counting pulses*
+<br />
 *RISING:counting the rising pulse*
 
 ## Publishing the encoder value from arduino and subscribing from ROS
