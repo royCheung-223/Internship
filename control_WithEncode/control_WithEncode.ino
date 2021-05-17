@@ -31,11 +31,11 @@ void messageCb( const geometry_msgs::Twist& msg){
 
       
 }
-std_msgs::Int64 str_msg;
+std_msgs::Int64 str_msg;          //define the message
 std_msgs::Int64 str_msgR;
-ros::Publisher chatter("chatter", &str_msg);
+ros::Publisher chatter("chatter", &str_msg);     //set rostopic name 
 ros::Publisher chatterR("chatterR", &str_msgR);
-ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );
+ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );  //subscribe the rostopic cmd_vel
 void Motors_init();
 void MotorL(int Pulse_Width1);
 void MotorR(int Pulse_Width2);
@@ -73,9 +73,9 @@ void loop(){
     Serial.println(pulses_L);
     Serial.print("Motor R:");
     Serial.println(pulses_R);
-    str_msg.data = pulses_L;
+    str_msg.data = pulses_L;     //set str_msg value = pulses_L
     str_msgR.data = pulses_R;
-    chatter.publish( &str_msg );
+    chatter.publish( &str_msg );   //publish the pulses_L value 
     chatterR.publish(&str_msgR);
     delay(100);
  
