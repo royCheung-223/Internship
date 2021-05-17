@@ -48,10 +48,11 @@ Open a new terminal
 <br />
 ./control_WithEncode.sh
 
-## run the roscore before using the rosserial 
+## 3. Some useful remark
+## 3.1 run the roscore before using the rosserial (if you have run the gazebo, no need to open the roscore again)
 ![Screenshot from 2021-05-12 11-50-46](https://user-images.githubusercontent.com/83933967/117915798-92e4fe80-b318-11eb-8571-bfa4f1892d72.png)
 
-## publishing the cmd_vel
+## 3.2 publishing the cmd_vel
 Step1:
 <br />
 reduce publishing rate from python to arduino
@@ -71,7 +72,7 @@ rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
 ![Screenshot from 2021-05-12 12-01-38](https://user-images.githubusercontent.com/83933967/117916506-dee47300-b319-11eb-9953-760d2e1f2c4a.png)
 
 
-## Ubuntu terminal
+## 3.3 Ubuntu terminal
 tmux
 <br />
 ctrl+b shift+" a horizontal line
@@ -80,7 +81,7 @@ ctrl+b shift+% a vertical line
 <br />
 ctrl+b ->      change window on terminal
 
-## Quick start of program(same as type in terminal)
+## 3.4 Quick start of program(same as type in terminal)
 echo "Start"
 <br />
 source devel/setup.bash
@@ -91,13 +92,14 @@ python src/demo_2.py
 <br />
 echo "Done"
 
-## change executable of program
+## 3.5 change executable of program
 intial white colour
-## sudo chmod a+x "file name.sh" 
+<br />
+*sudo chmod a+x "file name.sh"* 
+<br />
 after would become green 
-
-## 
-## reading the encoder value
+ 
+## 3.6 reading the encoder value
 Step1:
 <br />
 Set the encoder pin as input
@@ -112,7 +114,7 @@ attachInterrupt(digitalPinToInterrupt(3), countL, RISING); //count the rising pu
 <br />
 *RISING:counting the rising pulse*
 
-## Publishing the encoder value from arduino and subscribing from ROS
+## 3.7 Publishing the encoder value from arduino and subscribing from ROS
 ![Screenshot from 2021-05-14 17-07-13](https://user-images.githubusercontent.com/83933967/118248521-f74dbc80-b4d6-11eb-8903-31fd2c62882b.png)
 *left motor encoder value*
 ![Screenshot from 2021-05-14 17-11-30](https://user-images.githubusercontent.com/83933967/118249000-82c74d80-b4d7-11eb-84f2-c4532be04435.png)
