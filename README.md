@@ -27,7 +27,18 @@ cd "your workspace path"
 <br />
 source devel/setup.bash
 ## 2. Robot control
-## 2.1 Step of controlling the two robot
+## 2.x Change the physics of the virtual robot
+*Change the directory to urdf*
+<br />
+cd ~/Internship/Digital_Twins_IC382_old/src/robot_description/urdf/
+<br />
+*change the mass and inertia in URDF/robot.xacro*
+<br />
+Adjust the value in mass and inertia to let the virtual robot similar to the real robot
+Inertia formula can be found in
+<br />
+https://en.wikipedia.org/wiki/List_of_moments_of_inertia
+## 2.x Step of controlling the two robot
 Step 1:
 <br />
 *Change directory to workspace*
