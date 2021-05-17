@@ -27,7 +27,7 @@ cd "your workspace path"
 <br />
 source devel/setup.bash
 ## 2. Robot control
-## 2.x Change the physics of the virtual robot
+## 2.1 Change the physics of the virtual robot
 *Change the directory to urdf*
 <br />
 cd ~/Internship/Digital_Twins_IC382_old/src/robot_description/urdf/
@@ -39,7 +39,7 @@ Inertia formula can be found in
 <br />
 https://en.wikipedia.org/wiki/List_of_moments_of_inertia
 
-## 2.x reading the encoder value
+## 2.2 reading the encoder value
 Step1:
 <br />
 Set the encoder pin as input
@@ -54,7 +54,7 @@ attachInterrupt(digitalPinToInterrupt(3), countL, RISING); //count the rising pu
 <br />
 *RISING:counting the rising pulse*
 
-## 2.x Publishing the encoder value from arduino and subscribing from ROS
+## 2.3 Publishing the encoder value from arduino and subscribing from ROS
 *Publishing the encoder value from arduino*
 <br />
 refer to Internship/control_WithEncode/control_WithEncode.ino
@@ -76,11 +76,12 @@ refer to Internship/Digital_Twins_IC382_old/src/robot_control/src/control_WithEn
 
 
 
-## 2.x Step of controlling the two robot
+## 2.4 Step of controlling the two robot
 Step 1:
 <br />
 *Change directory to workspace*
 cd ~/Internship/Digital_Twins_IC382_old
+<br />
 Step 2:
 <br />
 Open a new terminal
