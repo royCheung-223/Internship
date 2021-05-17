@@ -1,7 +1,21 @@
 # Internship
+
+## Installing ROS in Ubuntu
+Version: Melodic
+sudo apt update
+sudo apt install ros-melodic-desktop-full
+
+##Creating a workspace
+source /opt/ros/melodic/setup.bash
+*creating a folder of workspace*
+mkdir -p ~/catkin_ws/src
+*change directory to your workspace*
+cd ~/catkin_ws/
+*creating CmakeList.txt to the src folder*
+catkin_make
 ## Set up the workspace
-*cd "your workspace path"*
-*source devel/setup.bash*
+cd "your workspace path"
+source devel/setup.bash
 
 ##run the roscore before using the rosserial
 ![Screenshot from 2021-05-12 11-50-46](https://user-images.githubusercontent.com/83933967/117915798-92e4fe80-b318-11eb-8571-bfa4f1892d72.png)
