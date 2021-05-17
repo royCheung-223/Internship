@@ -1,13 +1,14 @@
 # Internship
-
-## Installing ROS in Ubuntu
+## Virtual robot in GazeBo and real robot move at the same time
+## 1. Setup of ROS
+## 1.1 Installing ROS in Ubuntu
 Version: Melodic 
 <br />
 sudo apt update 
 <br />
 sudo apt install ros-melodic-desktop-full
 
-##Creating a workspace
+## 1.2 Creating a workspace
 source /opt/ros/melodic/setup.bash
 <br />
 *creating a folder of workspace*
@@ -21,12 +22,33 @@ cd ~/catkin_ws/
 *creating CmakeList.txt to the src folder*
 <br />
 catkin_make
-## Set up the workspace
+## 1.3 Set up the workspace (In this project, workspace = Digital_Twins_IC382_old)
 cd "your workspace path"
 <br />
 source devel/setup.bash
+## 2. Robot control
+## 2.1 Step of controlling the two robot
+Step 1:
+<br />
+*Change directory to workspace*
+cd ~/Internship/Digital_Twins_IC382_old
+Step 2:
+<br />
+Open a new terminal
+<br />
+*Loading the world*
+<br />
+./run_gazebo.sh
+<br />
+Step 3:
+<br />
+Open a new terminal
+<br />
+*Open the serial node*
+<br />
+./control_WithEncode.sh
 
-##run the roscore before using the rosserial
+## run the roscore before using the rosserial 
 ![Screenshot from 2021-05-12 11-50-46](https://user-images.githubusercontent.com/83933967/117915798-92e4fe80-b318-11eb-8571-bfa4f1892d72.png)
 
 ## publishing the cmd_vel
@@ -74,6 +96,7 @@ intial white colour
 ## sudo chmod a+x "file name.sh" 
 after would become green 
 
+## 
 ## reading the encoder value
 Step1:
 <br />
