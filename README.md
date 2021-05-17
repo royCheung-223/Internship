@@ -1,8 +1,8 @@
 # Internship
 
 ## Installing ROS in Ubuntu
-Version: Melodic
-sudo apt update
+Version: Melodic <br />
+sudo apt update <br />
 sudo apt install ros-melodic-desktop-full
 
 ##Creating a workspace
