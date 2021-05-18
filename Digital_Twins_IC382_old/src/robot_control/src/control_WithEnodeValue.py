@@ -57,10 +57,13 @@ def on_release(key):
         # Stop listener
         return False
 
-def callback(data):
+def callbackL(data):
+    print("encoderL:")
     print(data.data)                                #print the received message from rostopic
 
-       
+def callbackR(data):
+    print("encoderR:")
+    print(data.data)                                #print the received message from rostopic
         
     
    
@@ -70,8 +73,8 @@ def main():
     print("ROS node initialization is done!")
     #This script supported keyboard control
     listener = keyboard.Listener(on_press=on_press,on_release=on_release)
-    rospy.Subscriber("chatter", Int64, callback)    #subscribe the rostopic "chatter"
-    rospy.Subscriber("chatterR", Int64, callback)
+    rospy.Subscriber("chatter", Int64, callbackL)    #subscribe the rostopic "chatter"
+    rospy.Subscriber("chatterR", Int64, callbackR)
     listener.start()
     while not rospy.is_shutdown():
         speed_msg.linear.x = power

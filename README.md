@@ -65,11 +65,8 @@ refer to Internship/Digital_Twins_IC382_old/src/robot_control/src/control_WithEn
 
 
 
-![Screenshot from 2021-05-14 17-07-13](https://user-images.githubusercontent.com/83933967/118248521-f74dbc80-b4d6-11eb-8903-31fd2c62882b.png)
-*left motor encoder value*
-![Screenshot from 2021-05-14 17-11-30](https://user-images.githubusercontent.com/83933967/118249000-82c74d80-b4d7-11eb-84f2-c4532be04435.png)
-*right motor encoder value*
-![Screenshot from 2021-05-14 17-12-51](https://user-images.githubusercontent.com/83933967/118249102-9ffc1c00-b4d7-11eb-80b8-7790b35e3474.png)
+![ezgif com-gif-maker(3)](https://user-images.githubusercontent.com/83933967/118604778-21112700-b7e8-11eb-840f-f2314431c9a2.gif)
+
 *rostopic info*
 ![Screenshot from 2021-05-14 17-13-35](https://user-images.githubusercontent.com/83933967/118249224-c326cb80-b4d7-11eb-92b7-ef2d84f805f8.png)
 ![Screenshot from 2021-05-14 17-15-06](https://user-images.githubusercontent.com/83933967/118249372-f23d3d00-b4d7-11eb-89b3-7d07e1198b76.png)
