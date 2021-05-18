@@ -98,6 +98,9 @@ Open a new terminal
 <br />
 ./control_WithEncode.sh
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/83933967/118599500-31260800-b7e2-11eb-96cb-343ec489ef88.gif)
+
+
 ## 3. Some useful remark
 ## 3.1 run the roscore before using the rosserial (if you have run the gazebo, no need to open the roscore again)
 ![Screenshot from 2021-05-12 11-50-46](https://user-images.githubusercontent.com/83933967/117915798-92e4fe80-b318-11eb-8571-bfa4f1892d72.png)
