@@ -99,6 +99,7 @@ Open a new terminal
 ./control_WithEncode.sh
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/83933967/118599500-31260800-b7e2-11eb-96cb-343ec489ef88.gif)
+![ezgif com-gif-maker(2)](https://user-images.githubusercontent.com/83933967/118602517-63853480-b7e5-11eb-907c-adad472ade35.gif)
 
 
 ## 3. Some useful remark
