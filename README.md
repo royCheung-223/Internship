@@ -148,6 +148,13 @@ intial white colour
 *sudo chmod a+x "file name.sh"* 
 <br />
 after would become green 
+
+## 3.6 waitfortransform
+
+## 3.7 threading
+python library, can run two python script in parallel.
+https://blog.gtwang.org/programming/python-threading-multithreaded-programming-tutorial/
+
  
 
 
