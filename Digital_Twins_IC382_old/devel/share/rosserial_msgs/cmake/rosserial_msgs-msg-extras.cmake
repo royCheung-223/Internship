@@ -1,0 +1,2 @@
+set(rosserial_msgs_MESSAGE_FILES "/home/iastaff/Internship/Digital_Twins_IC382_old/src/catkin_arduino/src/rosserial/rosserial_msgs/msg/Log.msg;/home/iastaff/Internship/Digital_Twins_IC382_old/src/catkin_arduino/src/rosserial/rosserial_msgs/msg/TopicInfo.msg")
+set(rosserial_msgs_SERVICE_FILES "/home/iastaff/Internship/Digital_Twins_IC382_old/src/catkin_arduino/src/rosserial/rosserial_msgs/srv/RequestParam.srv")

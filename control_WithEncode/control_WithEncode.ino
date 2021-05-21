@@ -1,3 +1,4 @@
+
 //Code Authors:
 //* Ahmed A. Radwan (author)
 //* Maisa Jazba 
@@ -78,6 +79,7 @@ void loop(){
     chatter.publish( &str_msg );   //publish the pulses_L value 
     chatterR.publish(&str_msgR);
     delay(100);
+    
  
 }
 void Motors_init(){

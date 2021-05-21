@@ -67,14 +67,14 @@ set(robot_gazebo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robot_gazebo_SOURCE_PREFIX /home/iastaff/Digital_Twins_IC382/src/robot_gazebo)
-  set(robot_gazebo_DEVEL_PREFIX /home/iastaff/Digital_Twins_IC382/devel)
+  set(robot_gazebo_SOURCE_PREFIX /home/iastaff/Internship/Digital_Twins_IC382_old/src/robot_gazebo)
+  set(robot_gazebo_DEVEL_PREFIX /home/iastaff/Internship/Digital_Twins_IC382_old/devel)
   set(robot_gazebo_INSTALL_PREFIX "")
   set(robot_gazebo_PREFIX ${robot_gazebo_DEVEL_PREFIX})
 else()
   set(robot_gazebo_SOURCE_PREFIX "")
   set(robot_gazebo_DEVEL_PREFIX "")
-  set(robot_gazebo_INSTALL_PREFIX /home/iastaff/Digital_Twins_IC382/install)
+  set(robot_gazebo_INSTALL_PREFIX /home/iastaff/Internship/Digital_Twins_IC382_old/install)
   set(robot_gazebo_PREFIX ${robot_gazebo_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/iastaff/Digital_Twins_IC382/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/iastaff/Internship/Digital_Twins_IC382_old/install/lib;/home/iastaff/Internship/Digital_Twins_IC382_old/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -9,14 +9,25 @@
       <updateRate>40</updateRate>
       <leftJoint>left_wheel_hinge</leftJoint>
       <rightJoint>right_wheel_hinge</rightJoint>
-      <wheelSeparation>0.2</wheelSeparation>
-      <wheelDiameter>0.04</wheelDiameter>
+      <wheelSeparation>0.295</wheelSeparation>
+      <wheelDiameter>0.0650</wheelDiameter>
       <torque>40</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>chassis</robotBaseFrame>
     </plugin>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>chassis</bodyName>
+      <topicName>ground_truth/state</topicName>
+     <gaussianNoise>0.01</gaussianNoise>
+     <frameName>world</frameName>
+     <xyzOffsets>0 0 0</xyzOffsets>
+     <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+
   </gazebo>
 
   <gazebo reference="chassis">

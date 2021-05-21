@@ -1,2 +1,2 @@
-robot_control:robot_deep_learning:robot_description:robot_gazebo:robot_vision
+robot_control:robot_deep_learning:robot_description:robot_gazebo:robot_tf:robot_vision
 -DCATKIN_DEVEL_PREFIX=/home/iastaff/Internship/Digital_Twins_IC382_old/devel -DCMAKE_INSTALL_PREFIX=/home/iastaff/Internship/Digital_Twins_IC382_old/install -G Unix Makefiles

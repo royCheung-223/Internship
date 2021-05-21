@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iastaff/Digital_Twins_IC382/src
+CMAKE_SOURCE_DIR = /home/iastaff/Internship/Digital_Twins_IC382_old/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iastaff/Digital_Twins_IC382/build
+CMAKE_BINARY_DIR = /home/iastaff/Internship/Digital_Twins_IC382_old/build
 
 # Utility rule file for geometry_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/build: geo
 .PHONY : robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 
 robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	cd /home/iastaff/Digital_Twins_IC382/build/robot_deep_learning && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/iastaff/Internship/Digital_Twins_IC382_old/build/robot_deep_learning && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend:
-	cd /home/iastaff/Digital_Twins_IC382/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iastaff/Digital_Twins_IC382/src /home/iastaff/Digital_Twins_IC382/src/robot_deep_learning /home/iastaff/Digital_Twins_IC382/build /home/iastaff/Digital_Twins_IC382/build/robot_deep_learning /home/iastaff/Digital_Twins_IC382/build/robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/iastaff/Internship/Digital_Twins_IC382_old/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iastaff/Internship/Digital_Twins_IC382_old/src /home/iastaff/Internship/Digital_Twins_IC382_old/src/robot_deep_learning /home/iastaff/Internship/Digital_Twins_IC382_old/build /home/iastaff/Internship/Digital_Twins_IC382_old/build/robot_deep_learning /home/iastaff/Internship/Digital_Twins_IC382_old/build/robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_deep_learning/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 

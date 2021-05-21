@@ -1,0 +1,8 @@
+prefix=/home/iastaff/Internship/Digital_Twins_IC382_old/install
+
+Name: robot_tf
+Description: Description of robot_tf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
