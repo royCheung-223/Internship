@@ -13,7 +13,7 @@ import roslib
 import os
 import tf
 from geometry_msgs.msg import Point, Pose, Quaternion, Twist, Vector3
-from std_msgs.msg import Int64
+from std_msgs.msg import Int64, Float32
 from pynput import keyboard
 from math import pi, sin, cos
 from nav_msgs.msg import Odometry
@@ -27,7 +27,8 @@ last_left_ticks = 0
 last_right_ticks = 0
 TPR = 1000
 
-
+delta_L = 0
+delta_R = 0
 x = 0.0
 y = 0.0
 th = 0.0
@@ -92,8 +93,33 @@ def callbackR(data):
    # print(data.data)                                #print the received message from rostopic
     global left_ticks
     left_ticks = data.data
+
+def callbackPW1(data):
+    global delta_L
+    global left_ticks
+    global last_left_ticks
+    if data.data > 0:
+      delta_L = left_ticks - last_left_ticks
+    elif data.data < 0:
+      delta_L = last_left_ticks - left_ticks
+    elif data.data == 0:
+      delta_L = 0
+    print(delta_L)
     
+def callbackPW2(data):
+    global delta_R
+    global right_ticks
+    global last_right_ticks
+    if data.data > 0:
+      delta_R = right_ticks - last_right_ticks
+    elif data.data < 0:
+      delta_R = last_right_ticks - right_ticks
+    elif data.data == 0:
+      delta_R = 0
+    print(delta_R)
     
+
+
 def main():
 
     speed_msg,ros_publisher = ros_setup()
@@ -102,6 +128,8 @@ def main():
     listener = keyboard.Listener(on_press=on_press,on_release=on_release)
     rospy.Subscriber("chatter", Int64, callbackL)    #subscribe the rostopic "chatter"
     rospy.Subscriber("chatterR", Int64, callbackR)
+    rospy.Subscriber("pulse_Width1", Float32, callbackPW1)
+    rospy.Subscriber("pulse_Width2", Float32, callbackPW2)
     odom_pub = rospy.Publisher("testodom", Odometry, queue_size=50)
     odom_broadcaster = tf.TransformBroadcaster()
     last_time = rospy.Time(secs=1, nsecs=1)
@@ -124,10 +152,10 @@ def main():
         global vx
         global vy
         global vth
+        global delta_L
+        global delta_R
         ros_publisher.publish(speed_msg)
         current_time = rospy.Time.now()
-        delta_L = left_ticks - last_left_ticks
-        delta_R = right_ticks - last_right_ticks
         dt = (current_time - last_time).to_sec()
         print(current_time)
         dl = 2 * pi * wheelradius * delta_L / TPR / dt
