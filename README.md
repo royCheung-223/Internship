@@ -1,5 +1,7 @@
 # Internship
 ## Virtual robot in GazeBo and real robot move at the same time
+## Introduction
+The objective of this project is let the virtual robot and real robot move simultaneously. We would take the encoder value of the real robot to do the odometry transform. The virtual robot would follow the odometry message to project the location of the robot. 
 ## 1. Setup of ROS
 ## 1.1 Installing ROS in Ubuntu
 Version: Melodic 
