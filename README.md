@@ -100,6 +100,9 @@ Open a new terminal
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/83933967/118599500-31260800-b7e2-11eb-96cb-343ec489ef88.gif)
 ![ezgif com-gif-maker(2)](https://user-images.githubusercontent.com/83933967/118602517-63853480-b7e5-11eb-907c-adad472ade35.gif)
 
+## 2.5 Publishing the odometry message
+![ezgif com-gif-maker(4)](https://user-images.githubusercontent.com/83933967/119328835-1c9cb080-bcb7-11eb-8787-b45dae2475c0.gif)
+
 
 ## 3. Some useful remark
 ## 3.1 run the roscore before using the rosserial (if you have run the gazebo, no need to open the roscore again)
