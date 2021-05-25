@@ -101,6 +101,13 @@ Open a new terminal
 ![ezgif com-gif-maker(2)](https://user-images.githubusercontent.com/83933967/118602517-63853480-b7e5-11eb-907c-adad472ade35.gif)
 
 ## 2.5 Publishing the odometry message
+Publishing the pulse width to ros
+<br />
+if pulse width > 0 , delta encoder value = delta encoder value
+<br />
+if pulse width < 0 , delta encoder value = - delta encoder value
+<br />
+if pulse width == 0 , delta encoder value = 0
 ![ezgif com-gif-maker(4)](https://user-images.githubusercontent.com/83933967/119328835-1c9cb080-bcb7-11eb-8787-b45dae2475c0.gif)
 
 
