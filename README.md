@@ -110,6 +110,16 @@ if pulse width < 0 , delta encoder value = - delta encoder value
 if pulse width == 0 , delta encoder value = 0
 ![ezgif com-gif-maker(4)](https://user-images.githubusercontent.com/83933967/119328835-1c9cb080-bcb7-11eb-8787-b45dae2475c0.gif)
 
+## 2.6 Arduino code
+TestPWM: Check that the motor is working in normal
+<br />
+testCmd_vel: Testing the function of subscribing rostopic of cmd_vel is normal
+<br />
+testEncoder: Testing the encoder value is received and publish to ros
+<br />
+control_WithEncoder: Simple control with keyboard and get the encoder value of the motor. Then publish it to ros
+<br />
+control_odom: simple control with keyboard and send the Pulse width and encoder value to ros.
 
 ## 3. Some useful remark
 ## 3.1 run the roscore before using the rosserial (if you have run the gazebo, no need to open the roscore again)
